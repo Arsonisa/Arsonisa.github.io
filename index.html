@@ -18,6 +18,8 @@
             flex-direction: column;
             height: 100vh; /* Full viewport height */
             text-align: center;
+            position: relative;
+            transition: opacity 0.5s ease; /* Transition effect for opacity */
         }
         h1 {
             font-size: 2em;
@@ -27,7 +29,6 @@
             font-size: 1.2em;
             color: #666;
         }
-
         p {
             font-size: 1.2em;
             color: #666;
@@ -35,14 +36,13 @@
             max-width: 800px;
             margin: 20px auto;
         }
-
         .content {
             padding-top: 100vh; /* Adds 100% of the viewport height for scrolling */
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1>Arson is a(n) idiot</h1>
         <p class="subheader">Welcome to my blog site or something</p>
     </div>
@@ -56,9 +56,19 @@
         <p>And then it happened... a door opened to a world... rushing through the phone line like heroin through an addict's veins, an electronic pulse is sent out, a refuge from the day-to-day incompetencies is sought... a board is found.</p>
         <p>"This is it... this is where I belong..." I know everyone here... even if I've never met them, never talked to them, may never hear from them again... I know you all... Damn kid. Tying up the phone line again. They're all alike...</p>
         <p>You bet your ass we're all alike... we've been spoon-fed baby food at school when we hungered for steak... the bits of meat that you did let slip through were pre-chewed and tasteless. We've been dominated by sadists, or ignored by the apathetic. The few that had something to teach found us willing pupils, but those few are like drops of water in the desert.</p>
-        <p>This is our world now... the world of the electron and the switch, the beauty of the baud. We make use of a service already existing without paying for what could be dirt-cheap if it wasn't run by profiteering gluttons, and you call us criminals. We explore... and you call us criminals. We seek after knowledge... and you call us criminals. We exist without skin color, without nationality, without religious bias... and you call us criminals. You build atomic bombs, you wage wars, you murder, cheat, and lie to us and try to make us believe it's for our own good, yet we're the criminals.</p>
+        <p>This is our world now... the world of the electron and the switch, the beauty of the baud. We make use of a service already existing without paying for what could be dirt-cheap if it wasn't run by profiteering gluttons, and you call us criminals. We explore... and you call us criminals. We seek after knowledge... and you call us criminals. We exist without skin color, without nationality, without religious bias... and you call us criminals.</p>
         <p>Yes, I am a criminal. My crime is that of curiosity. My crime is that of judging people by what they say and think, not what they look like. My crime is that of outsmarting you, something that you will never forgive me for.</p>
         <p>I am a hacker, and this is my manifesto. You may stop this individual, but you can't stop us all... after all, we're all alike.</p>
     </div>
+
+    <script>
+        // JavaScript to change the opacity of the header based on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const scrollY = window.scrollY || window.pageYOffset;
+            const opacity = Math.max(1 - scrollY / 300, 0); // Fade out between 0 and 300px of scrolling
+            header.style.opacity = opacity;
+        });
+    </script>
 </body>
 </html>
