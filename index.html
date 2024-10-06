@@ -10,16 +10,15 @@
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            transition: opacity 0.3s ease; /* Smooth transition for the fade effect */
         }
-        .header {
+        .container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            height: 100vh; /* Full viewport height */
+            min-height: 200vh; /* Twice the height of the viewport to allow for more scrolling */
             text-align: center;
-            position: relative;
-            transition: opacity 0.5s ease; /* Transition effect for opacity */
         }
         h1 {
             font-size: 2em;
@@ -32,22 +31,16 @@
         p {
             font-size: 1.2em;
             color: #666;
-            text-align: center;
             max-width: 800px;
             margin: 20px auto;
         }
-        .content {
-            padding-top: 100vh; /* Adds 100% of the viewport height for scrolling */
-        }
     </style>
 </head>
-<body>
-    <div class="header" id="header">
+<body id="body">
+    <div class="container" id="container">
         <h1>Arson is a(n) idiot</h1>
         <p class="subheader">Welcome to my blog site or something</p>
-    </div>
-    
-    <div class="content">
+        
         <p>Another one got caught today, it's all over the papers. "Teenager Arrested in Computer Crime Scandal", "Hacker Arrested after Bank Tampering"... Damn kids. They're all alike.</p>
         <p>But did you, in your three-piece psychology and 1950's technobrain, ever take a look behind the eyes of the hacker? Did you ever wonder what made him tick, what forces shaped him, what may have molded him?</p>
         <p>I am a hacker, enter my world... Mine is a world that begins with school... I'm smarter than most of the other kids, this crap they teach us bores me... Damn underachiever. They're all alike.</p>
@@ -62,12 +55,12 @@
     </div>
 
     <script>
-        // JavaScript to change the opacity of the header based on scroll
+        // JavaScript to change the opacity of the entire page content based on scroll
         window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
+            const container = document.getElementById('container');
             const scrollY = window.scrollY || window.pageYOffset;
-            const opacity = Math.max(1 - scrollY / 300, 0); // Fade out between 0 and 300px of scrolling
-            header.style.opacity = opacity;
+            const opacity = Math.max(1 - scrollY / 150, 0); // Adjust to fade faster (fades over 150px)
+            container.style.opacity = opacity;
         });
     </script>
 </body>
