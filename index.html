@@ -11,12 +11,23 @@
             margin: 0;
             padding: 0;
         }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
         h1 {
             font-size: 2em;
             color: #333;
-            text-align: center;
-            margin-top: 100vh; /* Puts the header way down the page */
         }
+        .subheader {
+            font-size: 1.2em;
+            color: #666;
+        }
+
         p {
             font-size: 1.2em;
             color: #666;
@@ -26,14 +37,17 @@
         }
 
         .content {
-            padding-top: 200vh; /* Adds 200% of the viewport height to the top for scrolling */
+            padding-top: 100vh; /* Adds 100% of the viewport height for scrolling */
         }
     </style>
 </head>
 <body>
-    <h1>Arson is a(n) idiot</h1>
+    <div class="header">
+        <h1>Arson is a(n) idiot</h1>
+        <p class="subheader">Welcome to my blog site or something</p>
+    </div>
+    
     <div class="content">
-        <p>Welcome to my blog site or something</p>
         <p>Another one got caught today, it's all over the papers. "Teenager Arrested in Computer Crime Scandal", "Hacker Arrested after Bank Tampering"... Damn kids. They're all alike.</p>
         <p>But did you, in your three-piece psychology and 1950's technobrain, ever take a look behind the eyes of the hacker? Did you ever wonder what made him tick, what forces shaped him, what may have molded him?</p>
         <p>I am a hacker, enter my world... Mine is a world that begins with school... I'm smarter than most of the other kids, this crap they teach us bores me... Damn underachiever. They're all alike.</p>
