@@ -85,9 +85,11 @@
         // JavaScript to change the opacity of the header based on scroll
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
+            const content = document.getElementById('content');
             const scrollY = window.scrollY || window.pageYOffset;
             const opacity = Math.max(1 - scrollY / 300, 0); // Fade out between 0 and 300px of scrolling
             header.style.opacity = opacity;
+            content.style.opacity = opacity;
         });
     </script>
 </body>
