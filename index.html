@@ -7,27 +7,32 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
             background-color: #f4f4f4;
             margin: 0;
+            padding: 0;
         }
         h1 {
             font-size: 2em;
             color: #333;
+            text-align: center;
+            margin-top: 100vh; /* Puts the header way down the page */
         }
         p {
             font-size: 1.2em;
             color: #666;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .content {
+            padding-top: 200vh; /* Adds 200% of the viewport height to the top for scrolling */
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Arson is a(n) idiot</h1>
+    <h1>Arson is a(n) idiot</h1>
+    <div class="content">
         <p>Welcome to my blog site or something</p>
         <p>Another one got caught today, it's all over the papers. "Teenager Arrested in Computer Crime Scandal", "Hacker Arrested after Bank Tampering"... Damn kids. They're all alike.</p>
         <p>But did you, in your three-piece psychology and 1950's technobrain, ever take a look behind the eyes of the hacker? Did you ever wonder what made him tick, what forces shaped him, what may have molded him?</p>
@@ -43,5 +48,3 @@
     </div>
 </body>
 </html>
-
-  <script>
