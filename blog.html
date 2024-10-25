@@ -1,1 +1,121 @@
-insert blog
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arson is a(n) idiot</title>
+    <!-- Import Spectral font -->
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Spectral', serif; /* Changed to Spectral font */
+            background-color: #fdf6e3; /* Cream color */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: linear-gradient(#eee 1px, transparent 1px), linear-gradient(to right, #eee 1px, transparent 1px);
+            background-size: 40px 40px; /* Light grid pattern */
+        }
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            border-radius: 25px;
+            padding: 10px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: top 0.6s ease, background-color 0.4s ease;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .navbar li {
+            display: inline;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #ffcc99; /* Light cream highlight */
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+            position: relative;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .subheader {
+            font-size: 1.5em;
+            color: #555;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            color: #444;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .content {
+            padding-top: 100vh;
+            animation: contentFadeIn 2.5s ease-in-out;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            margin-top: 50px; /* Space between content and footer */
+        }
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes contentFadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
